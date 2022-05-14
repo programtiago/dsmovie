@@ -1,7 +1,13 @@
 package com.tiagodeveloper.dsmovie.domain;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="tb_movie")
 public class Movie {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private Double score;
